@@ -36,7 +36,8 @@ Parameters
 | `special`         | Special formating                     | **Tuple containing:** `all_reset`, `overwrite_line` |
 
 
-ANSI code correspondance table:
+ANSI code correspondance table
+------------------------------
 
 | Keyword           | Values                            | ANSI code         |
 |-------------------|-----------------------------------|-------------------|
