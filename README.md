@@ -29,13 +29,12 @@ Parameters
 
 Instructions for formatting the string, with values in the following table:
 
-+---------------+-----------------------------------+------------+
 | Keyword       | Values (tuple of given values)    | Ansi code  |
-+---------------+-----------------------------------+------------+
+|---------------|-----------------------------------|------------|
 | special       | Tuple containing any of:          |            |
 |               | 'all_reset'                       | 0          |
 |               | 'overwrite_line'                  | F          |
-+---------------+-----------------------------------+------------+
+|---------------|-----------------------------------|------------|
 | style         | Tuple containing any of:          |            |
 |               | 'bold'                            | 1          |
 |               | 'faint'                           | 2          |
@@ -59,7 +58,7 @@ Instructions for formatting the string, with values in the following table:
 |               | 'overlined'                       | 53         |
 |               | 'noframe'                         | 54         |
 |               | 'nooverline'                      | 55         |
-+---------------+-----------------------------------+------------+
+|---------------|-----------------------------------|------------|
 | fg or bg      | Any of the following values:      |            |
 |               | 'black'                           | 30 or 40   |
 |               | 'red'                             | 31 or 41   |
@@ -70,7 +69,6 @@ Instructions for formatting the string, with values in the following table:
 |               | 'cyan'                            | 36 or 46   |
 |               | 'white'                           | 37 or 47   |
 |               | 'default'                         | 39 or 49   |
-+---------------+-----------------------------------+------------+
+|---------------|-----------------------------------|------------|
 | fg256 or      | Any integer (i) in range 0,256.   | 38;5;i or  |
 | bg256         |                                   | 48;5;i     |
-+---------------+-----------------------------------+------------+
