@@ -30,19 +30,16 @@ Parameters
 
 | Keyword           | Description                           | Values        |
 |-------------------|---------------------------------------|---------------|
-| `special`         | Special formating                     | **Tuple containing:** `all_reset`, `overwrite_line` |
 | `style`           | Text style and decoration             | **Tuple containing**: `bold`, `faint`, `highlight`, `underline`, `blink_slow`, `blink_rapid`, `negative`, `conceal`, `crossed-out`, `nobold`, `normalcolor`, `noitalic`, `nounderline`, `noblink`, `positive`, `noconceal`, `nocrossed-out`, `framed`, `encircled`, `overlined`, `noframe`, `nooverline` |
 | `fg` /  `bg`      | Text (fg) /  background (bg) color.   | **Any of:** `black`,`red`,`green`,`yellow`,`blue`,`magenta`,`cyan`,`white`,`default` |
-| `fg256` /  `bg256`| 256-color support for text /  bg.     | **Integer** in range `0,256` |
+| `fg256` /  `bg256`| 256-color support for text /  bg.     | **Integer** in range `0, 256` |
+| `special`         | Special formating                     | **Tuple containing:** `all_reset`, `overwrite_line` |
 
 
 ANSI code translation table:
 
 | Keyword           | Values                            | ANSI code         |
 |-------------------|-----------------------------------|-------------------|
-| `special`         | `all_reset`                       | 0                 |
-|                   | `overwrite_line`                  | F                 |
-|                   |                                   |                   |
 | `style`           | `bold`                            | 1                 |
 |                   | `faint`                           | 2                 |
 |                   | `highlight`                       | 3                 |
@@ -76,4 +73,7 @@ ANSI code translation table:
 |                   | `white`                           | 37 /  47          |
 |                   | `default`                         | 39 /  49          |
 |                   |                                   |                   |
-| `fg256` /  `bg256`| `i` in range 0, 256               | 38;5;i or 48;5;i  |
+| `fg256` /  `bg256`| `i` in range `0, 256`             | 38;5;i /  48;5;i  |
+
+| `special`         | `all_reset`                       | 0                 |
+|                   | `overwrite_line`                  | F                 |
