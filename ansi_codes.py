@@ -67,7 +67,10 @@ _CODES = {
         }
     }
 
-def ansi_format(string, **kwargs):
+# rename default Python `print` to `_print`
+_print = print
+
+def format(string, **kwargs):
     ''' Return a string wrapped between the ANSI codes implementing the format
     passed as arguments. '''
     codes = []
@@ -90,7 +93,7 @@ def ansi_format(string, **kwargs):
         _ESCAPE.format(_CODES['tuple']['special']['all_reset']),
         )
 
-def ansi_print(*args, **kwargs):
+def print(*args, **kwargs):
     ''' Call ansi_format and print its output. '''
     ansi_kwargs = {}
     print_kwargs = {}
@@ -103,5 +106,5 @@ def ansi_print(*args, **kwargs):
             print_kwargs.update({k:v})
     print_args = []
     for arg in args:
-        print_args.append(ansi_format(arg, **ansi_kwargs))
-    print(*print_args, **print_kwargs)
+        print_args.append(format(arg, **ansi_kwargs))
+    _print(*print_args, **print_kwargs)

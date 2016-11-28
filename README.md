@@ -13,20 +13,18 @@ Methods
 
 This package provides two methods:
 
-- `ansi_format(string, **kwargs)` which returns a string preceded by the
+- `ansi_codes.format(*args, **kwargs)` which returns a string preceded by the
   ANSI-codes implementing the specifications passed as keyword arguments and
   followed by the code to reset the output format,
-- `ansi_print(string, **kwargs)` which calls `ansi_format` and prints its
+- `ansi_codes.print(*args, **kwargs)` which calls `ansi_codes.format` and prints its
   result.
 
 Parameters
 ----------
 
-- `string`: `string`  
-    The string to format.
+- `*args`: Passed to Python's `print`.
 
-- `**kwargs`:  
-    Instructions for formatting the string, with values in the following table:
+- `**kwargs`: Instructions for formatting the string, with values in the following table:
 
 | Keyword           | Description                           | Values        |
 |-------------------|---------------------------------------|---------------|
@@ -34,6 +32,9 @@ Parameters
 | `fg` /  `bg`      | Text (fg) /  background (bg) color    | **Any of:** `black`,`red`,`green`,`yellow`,`blue`,`magenta`,`cyan`,`white`,`default` |
 | `fg256` /  `bg256`| 256-color support for text /  bg      | **Integer** in range `0, 256` |
 | `special`         | Special formating                     | **Tuple containing:** `all_reset`, `overwrite_line` |
+
+
+Remaining values are passed to Python’s `print`.
 
 
 ANSI code correspondance table
