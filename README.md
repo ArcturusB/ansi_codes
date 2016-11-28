@@ -28,14 +28,22 @@ Parameters
 - `**kwargs`:  
     Instructions for formatting the string, with values in the following table:
 
+| Keyword           | Description                           | Values        |
+|-------------------|---------------------------------------|---------------|
+| `special`         | Special formating                     | **Tuple containing:** `all_reset`, `overwrite_line` |
+| `style`           | Text style and decoration             | **Tuple containing**: `bold`, `faint`, `highlight`, `underline`, `blink_slow`, `blink_rapid`, `negative`, `conceal`, `crossed-out`, `nobold`, `normalcolor`, `noitalic`, `nounderline`, `noblink`, `positive`, `noconceal`, `nocrossed-out`, `framed`, `encircled`, `overlined`, `noframe`, `nooverline` |
+| `fg` /  `bg`      | Text (fg) /  background (bg) color.   | **Any of:** `black`,`red`,`green`,`yellow`,`blue`,`magenta`,`cyan`,`white`,`default` |
+| `fg256` /  `bg256`| 256-color support for text /  bg.     | **Integer** in range `0,256` |
+
+
+ANSI code translation table:
+
 | Keyword           | Values                            | ANSI code         |
 |-------------------|-----------------------------------|-------------------|
-| `special`         | **Tuple containing:**             |                   |
-|                   | `all_reset`                       | 0                 |
+| `special`         | `all_reset`                       | 0                 |
 |                   | `overwrite_line`                  | F                 |
 |                   |                                   |                   |
-| `style`           | **Tuple containing**              |                   |
-|                   | `bold`                            | 1                 |
+| `style`           | `bold`                            | 1                 |
 |                   | `faint`                           | 2                 |
 |                   | `highlight`                       | 3                 |
 |                   | `underline`                       | 4                 |
@@ -58,15 +66,14 @@ Parameters
 |                   | `noframe`                         | 54                |
 |                   | `nooverline`                      | 55                |
 |                   |                                   |                   |
-| `fg` or `bg`      | **Any of:**                       |                   |
-|                   | `black`                           | 30 or 40          |
-|                   | `red`                             | 31 or 41          |
-|                   | `green`                           | 32 or 42          |
-|                   | `yellow`                          | 33 or 43          |
-|                   | `blue`                            | 34 or 44          |
-|                   | `magenta`                         | 35 or 45          |
-|                   | `cyan`                            | 36 or 46          |
-|                   | `white`                           | 37 or 47          |
-|                   | `default`                         | 39 or 49          |
+| `fg` /  `bg`      | `black`                           | 30 /  40          |
+|                   | `red`                             | 31 /  41          |
+|                   | `green`                           | 32 /  42          |
+|                   | `yellow`                          | 33 /  43          |
+|                   | `blue`                            | 34 /  44          |
+|                   | `magenta`                         | 35 /  45          |
+|                   | `cyan`                            | 36 /  46          |
+|                   | `white`                           | 37 /  47          |
+|                   | `default`                         | 39 /  49          |
 |                   |                                   |                   |
-| `fg256` or `bg256`| Integer in range 0,256.           | 38;5;i or 48;5;i  |
+| `fg256` /  `bg256`| `i` in range 0, 256               | 38;5;i or 48;5;i  |
