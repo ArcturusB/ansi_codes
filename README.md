@@ -74,6 +74,6 @@ ANSI code translation table:
 |                   | `default`                         | 39 /  49          |
 |                   |                                   |                   |
 | `fg256` /  `bg256`| `i` in range `0, 256`             | 38;5;i /  48;5;i  |
-
+|                   |                                   |                   |
 | `special`         | `all_reset`                       | 0                 |
 |                   | `overwrite_line`                  | F                 |
