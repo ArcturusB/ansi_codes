@@ -30,7 +30,7 @@ Parameters
 Instructions for formatting the string, with values in the following table:
 
 | Keyword       | Values (tuple of given values)    | Ansi code  |
-|               |                                   |            |
+|---------------|-----------------------------------|------------|
 | special       | Tuple containing any of:          |            |
 |               | 'all_reset'                       | 0          |
 |               | 'overwrite_line'                  | F          |
