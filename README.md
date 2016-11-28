@@ -31,12 +31,12 @@ Parameters
 | Keyword           | Description                           | Values        |
 |-------------------|---------------------------------------|---------------|
 | `style`           | Text style and decoration             | **Tuple containing**: `bold`, `faint`, `highlight`, `underline`, `blink_slow`, `blink_rapid`, `negative`, `conceal`, `crossed-out`, `nobold`, `normalcolor`, `noitalic`, `nounderline`, `noblink`, `positive`, `noconceal`, `nocrossed-out`, `framed`, `encircled`, `overlined`, `noframe`, `nooverline` |
-| `fg` /  `bg`      | Text (fg) /  background (bg) color.   | **Any of:** `black`,`red`,`green`,`yellow`,`blue`,`magenta`,`cyan`,`white`,`default` |
-| `fg256` /  `bg256`| 256-color support for text /  bg.     | **Integer** in range `0, 256` |
+| `fg` /  `bg`      | Text (fg) /  background (bg) color    | **Any of:** `black`,`red`,`green`,`yellow`,`blue`,`magenta`,`cyan`,`white`,`default` |
+| `fg256` /  `bg256`| 256-color support for text /  bg      | **Integer** in range `0, 256` |
 | `special`         | Special formating                     | **Tuple containing:** `all_reset`, `overwrite_line` |
 
 
-ANSI code translation table:
+ANSI code correspondance table:
 
 | Keyword           | Values                            | ANSI code         |
 |-------------------|-----------------------------------|-------------------|
