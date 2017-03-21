@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from ansi_codes import ansi_print
+from ansi_codes import print
 
 # none, bold, faint
 
@@ -14,11 +14,11 @@ def print_256_per_col(cols, start, stop):
         col += 1
         fg_string = '  {:>3} '.format(color)
         bg_string = 7*' '
-        ansi_print(fg_string, fg256=color, end='') 
-        ansi_print('n', fg256=color, end='') 
-        ansi_print('b', fg256=color, style='bold', end='') 
-        ansi_print('f', fg256=color, style='faint', end=' ') 
-        ansi_print(bg_string, bg256=color, end=end_char) 
+        print(fg_string, fg256=color, end='')
+        print('n', fg256=color, end='')
+        print('b', fg256=color, style='bold', end='')
+        print('f', fg256=color, style='faint', end=' ')
+        print(bg_string, bg256=color, end=end_char)
 
 ansi_colors = {
         0: 'black',
@@ -34,22 +34,22 @@ ansi_colors = {
 
 fg_string = '    9 '
 bg_string = 7*' '
-ansi_print(fg_string, fg='default', end='') 
-ansi_print('n', fg='default', end='') 
-ansi_print('b', fg='default', style='bold', end='') 
-ansi_print('f', fg='default', style='faint', end=' ') 
-ansi_print(bg_string, bg='default')
+print(fg_string, fg='default', end='')
+print('n', fg='default', end='')
+print('b', fg='default', style='bold', end='')
+print('f', fg='default', style='faint', end=' ')
+print(bg_string, bg='default')
 
 for color_code in range(7):
     color = ansi_colors[color_code]
     end_char = ''
     fg_string = '  {:>3} '.format(color_code)
     bg_string = 7*' '
-    ansi_print(fg_string, fg=color, end='') 
-    ansi_print('n', fg=color, end='') 
-    ansi_print('b', fg=color, style='bold', end='') 
-    ansi_print('f', fg=color, style='faint', end=' ') 
-    ansi_print(bg_string, bg=color, end=end_char) 
+    print(fg_string, fg=color, end='')
+    print('n', fg=color, end='')
+    print('b', fg=color, style='bold', end='')
+    print('f', fg=color, style='faint', end=' ')
+    print(bg_string, bg=color, end=end_char)
 print('\n')
 
 print_256_per_col(8, 0, 16)
