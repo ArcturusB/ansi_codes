@@ -2,6 +2,8 @@
 
 # Not working yet!
 
+from __future__ import print_function
+
 
 _ESCAPE = '\033[{}m'
 
