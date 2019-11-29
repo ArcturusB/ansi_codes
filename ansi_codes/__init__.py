@@ -86,7 +86,6 @@ ANSI code correspondance table
 
 '''
 
-__version__ = "1.0"
 __author__ = "Gabriel Pelouze"
 __copyright__ = "Gabriel Pelouze 2016"
 __license__ = "GPL v3"
